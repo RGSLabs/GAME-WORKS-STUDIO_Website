@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post - GAME WORKS STUDIO™</title>
+    <meta name="description" content="Read the latest news and updates from GAME WORKS STUDIO™">
+    
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="apple-touch-icon" href="img/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <style>
+        .post-hero {
+            min-height: 60vh;
+            display: flex;
+            align-items: flex-end;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .post-hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .post-hero-bg::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(10,10,15,0.3) 0%, rgba(10,10,15,0.9) 100%);
+        }
+        
+        .post-hero-content {
+            position: relative;
+            z-index: 1;
+            padding: 4rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        
+        .post-category {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: var(--gradient-primary);
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+        
+        .post-title {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+        
+        .post-meta {
+            display: flex;
+            gap: 2rem;
+            color: var(--color-text-secondary);
+            font-size: 0.95rem;
+        }
+        
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        
+        .post-content p {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: var(--color-text-secondary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .post-content h2,
+        .post-content h3 {
+            font-family: var(--font-display);
+            color: var(--color-primary);
+            margin: 2.5rem 0 1rem;
+        }
+        
+        .post-content img {
+            border-radius: var(--border-radius);
+            margin: 2rem 0;
+        }
+        
+        .post-content blockquote {
+            border-left: 4px solid var(--color-primary);
+            padding-left: 2rem;
+            margin: 2rem 0;
+            font-style: italic;
+            color: var(--color-text);
+            font-size: 1.2rem;
+        }
+        
+        .back-to-blog {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--color-primary);
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+        
+        .back-to-blog svg {
+            width: 20px;
+            height: 20px;
+            transform: rotate(180deg);
+        }
+        
+        .post-not-found {
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+        
+        .post-not-found h1 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .post-not-found p {
+            color: var(--color-text-secondary);
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursorFollower"></div>
+
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <img src="img/logo.png" alt="GAME WORKS STUDIO" class="loader-logo">
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="img/logo.png" alt="GAME WORKS STUDIO™ Logo">
+            </a>
+            <div class="nav-menu">
+                <a href="index.html#home" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#projects" class="nav-link">What We Make</a>
+                <a href="index.html#jolly" class="nav-link">Jolly Serie</a>
+                <a href="index.html#supergrid" class="nav-link">Super Grid</a>
+                <a href="index.html#credits" class="nav-link">Credits</a>
+                <a href="index.html#blog" class="nav-link active">Blog</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div id="postContainer"></div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom" style="border: none; padding-top: 0;">
+                <p>&copy; 2026 GAME WORKS STUDIO™. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const postId = parseInt(urlParams.get('id'));
+            
+            if (!postId) {
+                showNotFound();
+                return;
+            }
+            
+            try {
+                const response = await fetch('js/blog-posts.json');
+                const posts = await response.json();
+                const post = posts.find(p => p.id === postId);
+                
+                if (!post) {
+                    showNotFound();
+                    return;
+                }
+                
+                displayPost(post);
+                updateMetaTags(post);
+            } catch (error) {
+                showNotFound();
+            }
+        });
+        
+        function displayPost(post) {
+            const container = document.getElementById('postContainer');
+            
+            const date = new Date(post.date);
+            const formattedDate = date.toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+            
+            container.innerHTML = `
+                <article>
+                    <div class="post-hero">
+                        <div class="post-hero-bg" style="background-image: url('${post.image}')"></div>
+                        <div class="post-hero-content">
+                            <span class="post-category">${post.category}</span>
+                            <h1 class="post-title">${post.title}</h1>
+                            <div class="post-meta">
+                                <span>${formattedDate}</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="post-content">
+                        <a href="index.html#blog" class="back-to-blog">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                            Back to Blog
+                        </a>
+                        
+                        ${formatContent(post.content)}
+                    </div>
+                </article>
+            `;
+        }
+        
+        function formatContent(content) {
+            return content.split('\n\n').map(paragraph => {
+                if (paragraph.startsWith('> ')) {
+                    return `<blockquote>${paragraph.substring(2)}</blockquote>`;
+                }
+                return `<p>${paragraph}</p>`;
+            }).join('');
+        }
+        
+        function updateMetaTags(post) {
+            document.title = `${post.title} - GAME WORKS STUDIO™`;
+            
+            const metaDesc = document.querySelector('meta[name="description"]');
+            if (metaDesc) {
+                metaDesc.setAttribute('content', post.excerpt);
+            }
+        }
+        
+        function showNotFound() {
+            const container = document.getElementById('postContainer');
+            container.innerHTML = `
+                <div class="post-not-found">
+                    <h1>Post Not Found</h1>
+                    <p>The blog post you're looking for doesn't exist or has been removed.</p>
+                    <a href="index.html#blog" class="btn btn-primary">Back to Blog</a>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "title": "Welcome to Our New Website",
+        "category": "Announcement",
+        "date": "2026-09-10",
+        "image": "img/blog/welcome.jpg",
+        "excerpt": "We are excited to launch our new official website. Stay tuned for updates about our projects and behind-the-scenes content.",
+        "content": "Welcome to the official GAME WORKS STUDIO™ website! We are thrilled to finally have a home where we can share our journey, projects, and connect with our community. This website will serve as the central hub for all our announcements, development updates, and releases. Stay tuned for more exciting content coming soon!"
+    },
+    {
+        "id": 2,
+        "title": "Solar Flare - Development Update #1",
+        "category": "Development",
+        "date": "2026-09-05",
+        "image": "img/blog/solar-update.jpg",
+        "excerpt": "Progress update on our animated series Solar Flare. New character designs and storyboards are now complete.",
+        "content": "We're making great progress on Solar Flare! Our team has been working hard on character designs and storyboards. The world of Solar Flare is coming to life with stunning visuals and compelling storytelling. We can't wait to share more with you soon. Thank you for your continued support!"
+    },
+    {
+        "id": 3,
+        "title": "Jolly Under Plex - Beta Testing Now Open",
+        "category": "Release",
+        "date": "2026-08-28",
+        "image": "img/blog/jolly-beta.jpg",
+        "excerpt": "Beta testing for Jolly Under Plex is now open. Join our GameJolt community to participate and share your feedback.",
+        "content": "The wait is over! Beta testing for Jolly Under Plex is now officially open. We invite all brave security guards to test their skills against our animatronics. Visit our GameJolt page to download the beta version and share your feedback with the development team. Your input is invaluable in making this the best horror experience possible."
+    },
+    {
+        "id": 4,
+        "title": "Meet the Team - Spotlight on Our Animators",
+        "category": "Team",
+        "date": "2026-08-20",
+        "image": "img/blog/team-spotlight.jpg",
+        "excerpt": "Get to know the talented animators behind our projects. This week we spotlight our 3D animation team.",
+        "content": "Behind every great animation is a team of dedicated artists. This week we're putting the spotlight on our incredible 3D animation team. From character rigging to fluid motion, these talented individuals bring our visions to life. Stay tuned for individual interviews and behind-the-scenes looks at their creative process."
+    },
+    {
+        "id": 5,
+        "title": "Super Grid - New Levels Coming Soon",
+        "category": "Development",
+        "date": "2026-08-15",
+        "image": "img/blog/supergrid-update.jpg",
+        "excerpt": "We're expanding Super Grid with new parkour levels and hidden secrets to discover.",
+        "content": "Super Grid is getting bigger! We're excited to announce that new levels are in development. Expect more challenging parkour sequences, hidden areas to discover, and secrets to uncover. Our level designers are pushing the boundaries of what's possible in the grid. Get ready to test your skills!"
+    },
+    {
+        "id": 6,
+        "title": "Thank You for 1000 Subscribers",
+        "category": "Community",
+        "date": "2026-08-10",
+        "image": "img/blog/milestone.jpg",
+        "excerpt": "We've reached 1000 subscribers on YouTube! Thank you for your amazing support.",
+        "content": "We are absolutely thrilled to announce that we've reached 1000 subscribers on our YouTube channel! This milestone wouldn't be possible without your incredible support. To celebrate, we're planning something special. Stay tuned for an announcement about our celebration video and upcoming content schedule. Thank you for being part of our journey!"
+    }
+]

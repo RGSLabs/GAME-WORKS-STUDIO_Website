@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO -->
+    <title>Blog - GAME WORKS STUDIO™ | News & Updates</title>
+    <meta name="description" content="All the latest news, development updates and announcements from GAME WORKS STUDIO™.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://gameworksstudio.github.io/blog.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
+    <link rel="apple-touch-icon" href="img/favicon.png">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Blog - GAME WORKS STUDIO™">
+    <meta property="og:description" content="Latest news and updates from the studio.">
+    <meta property="og:image" content="https://gameworksstudio.github.io/img/og-image.jpg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <style>
+        .blog-page-header {
+            padding: 10rem 2rem 3rem;
+            text-align: center;
+            background: var(--color-background-light);
+        }
+        
+        .blog-page-header h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 900;
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+        
+        .blog-page-header p {
+            color: var(--color-text-secondary);
+            font-size: 1.1rem;
+        }
+        
+        .blog-page-content {
+            padding: 4rem 2rem 6rem;
+        }
+        
+        .blog-filters {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+        
+        .filter-btn {
+            padding: 0.6rem 1.5rem;
+            background: var(--color-surface);
+            border: 1px solid var(--color-border-light);
+            border-radius: 30px;
+            color: var(--color-text-secondary);
+            font-family: var(--font-display);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+        
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--gradient-primary);
+            color: white;
+            border-color: transparent;
+        }
+        
+        .blog-grid-full {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            max-width: var(--container-max);
+            margin: 0 auto;
+        }
+        
+        .blog-empty {
+            text-align: center;
+            color: var(--color-text-muted);
+            padding: 4rem 2rem;
+            grid-column: 1 / -1;
+        }
+        
+        .back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--color-primary);
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+        
+        .back-home svg {
+            width: 20px;
+            height: 20px;
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursorFollower"></div>
+
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <img src="img/logo.png" alt="GAME WORKS STUDIO" class="loader-logo">
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo hover-target">
+                <img src="img/logo.png" alt="GAME WORKS STUDIO™ Logo">
+            </a>
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html#home" class="nav-link hover-target">Home</a>
+                <a href="index.html#about" class="nav-link hover-target">About</a>
+                <a href="index.html#projects" class="nav-link hover-target">What We Make</a>
+                <a href="index.html#jolly" class="nav-link hover-target">Jolly Serie</a>
+                <a href="index.html#supergrid" class="nav-link hover-target">Super Grid</a>
+                <a href="index.html#credits" class="nav-link hover-target">Credits</a>
+                <a href="blog.html" class="nav-link hover-target active">Blog</a>
+                <a href="index.html#contact" class="nav-link hover-target">Contact</a>
+            </div>
+            <div class="hamburger hover-target" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="blog-page-header">
+        <h1>STUDIO BLOG</h1>
+        <p>News, development updates and behind-the-scenes content</p>
+    </header>
+
+    <!-- Blog Content -->
+    <main class="blog-page-content">
+        <div class="container">
+            <a href="index.html" class="back-home">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+                Back to Home
+            </a>
+            
+            <div class="blog-filters" id="blogFilters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="Announcement">Announcements</button>
+                <button class="filter-btn" data-filter="Development">Development</button>
+                <button class="filter-btn" data-filter="Release">Releases</button>
+                <button class="filter-btn" data-filter="Team">Team</button>
+                <button class="filter-btn" data-filter="Community">Community</button>
+            </div>
+            
+            <div class="blog-grid-full" id="blogGridFull">
+                <!-- Posts loaded via JavaScript -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom" style="border: none; padding-top: 0;">
+                <div class="footer-credits">
+                    <p>&copy; 2026 GAME WORKS STUDIO™. All rights reserved.</p>
+                    <p class="powered-by">
+                        Website crafted by 
+                        <a href="https://rabbitgamesdev.github.io/RGS-Labs/" target="_blank" rel="noopener noreferrer" class="rgs-credit">
+                            RGS Labs™
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script>
+        let allPosts = [];
+        
+        document.addEventListener('DOMContentLoaded', async () => {
+            const grid = document.getElementById('blogGridFull');
+            
+            try {
+                const response = await fetch('js/blog-posts.json');
+                allPosts = await response.json();
+                
+                // Sort newest first
+                allPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
+                
+                renderPosts(allPosts);
+                initFilters();
+            } catch (error) {
+                grid.innerHTML = `
+                    <div class="blog-empty">
+                        <h3>No posts available yet</h3>
+                        <p>Check back soon for news and updates!</p>
+                    </div>
+                `;
+            }
+        });
+        
+        function renderPosts(posts) {
+            const grid = document.getElementById('blogGridFull');
+            grid.innerHTML = '';
+            
+            if (posts.length === 0) {
+                grid.innerHTML = `
+                    <div class="blog-empty">
+                        <h3>No posts in this category</h3>
+                    </div>
+                `;
+                return;
+            }
+            
+            posts.forEach(post => {
+                const date = new Date(post.date);
+                const formattedDate = date.toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                });
+                
+                const card = document.createElement('article');
+                card.className = 'blog-card reveal visible';
+                card.innerHTML = `
+                    <div class="blog-image">
+                        <img src="${post.image}" alt="${post.title}" loading="lazy">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">${post.category}</span>
+                            <span>${formattedDate}</span>
+                        </div>
+                        <h3 class="blog-title">${post.title}</h3>
+                        <p class="blog-excerpt">${post.excerpt}</p>
+                        <a href="blog-post.html?id=${post.id}" class="blog-link">
+                            Read More
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+        
+        function initFilters() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    
+                    const filter = btn.getAttribute('data-filter');
+                    
+                    if (filter === 'all') {
+                        renderPosts(allPosts);
+                    } else {
+                        const filtered = allPosts.filter(p => p.category === filter);
+                        renderPosts(filtered);
+                    }
+                });
+            });
+        }
+    </script>
+</body>
+</html>

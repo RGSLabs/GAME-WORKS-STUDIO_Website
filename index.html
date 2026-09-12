@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Primary -->
+    <title>GAME WORKS STUDIO™ | Independent Game Development & Animation Studio</title>
+    <meta name="description" content="GAME WORKS STUDIO™ is an independent creative team focused on animation, storytelling, and game development. Creators of Solar Flare series and Jolly Under Plex.">
+    <meta name="keywords" content="game development, animation studio, indie games, solar flare, jolly series, 3D animation, game design">
+    <meta name="author" content="GAME WORKS STUDIO™">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://gameworksstudio.github.io/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png">
+    <link rel="apple-touch-icon" href="img/favicon.png">
+    <link rel="manifest" href="site.webmanifest">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gameworksstudio.github.io/">
+    <meta property="og:title" content="GAME WORKS STUDIO™ | Independent Game Development & Animation">
+    <meta property="og:description" content="Creating original worlds, characters, and stories with a strong focus on emotion, atmosphere, and memorable experiences.">
+    <meta property="og:image" content="https://gameworksstudio.github.io/img/og-image.jpg">
+    <meta property="og:site_name" content="GAME WORKS STUDIO™">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://gameworksstudio.github.io/">
+    <meta property="twitter:title" content="GAME WORKS STUDIO™ | Independent Game Development & Animation">
+    <meta property="twitter:description" content="Creating original worlds, characters, and stories. Creators of Solar Flare and Jolly Under Plex.">
+    <meta property="twitter:image" content="https://gameworksstudio.github.io/img/og-image.jpg">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "GAME WORKS STUDIO™",
+        "url": "https://gameworksstudio.github.io",
+        "logo": "https://gameworksstudio.github.io/img/logo.png",
+        "description": "Independent creative team focused on animation, storytelling, and game development.",
+        "foundingDate": "2026",
+        "sameAs": [
+            "https://gamejolt.com/@GAMES_GRAVE",
+            "https://gamejolt.com/@gravesolar",
+            "https://www.youtube.com/@solarflare200"
+        ]
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursorFollower"></div>
+
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+    <div class="loader-content">
+        <img src="img/logo.png" alt="GAME WORKS STUDIO" class="loader-logo">
+        <div class="loader-bar"></div>
+        <p class="loader-credit">
+            Powered by <a href="https://rabbitgamesdev.github.io/RGS-Labs/" target="_blank" rel="noopener noreferrer">RGS Labs™</a>
+        </p>
+    </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo hover-target">
+                <img src="img/logo.png" alt="GAME WORKS STUDIO™ Logo">
+            </a>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link hover-target active">Home</a>
+                <a href="#about" class="nav-link hover-target">About</a>
+                <a href="#projects" class="nav-link hover-target">What We Make</a>
+                <a href="#jolly" class="nav-link hover-target">Jolly Serie</a>
+                <a href="#supergrid" class="nav-link hover-target">Super Grid</a>
+                <a href="#credits" class="nav-link hover-target">Credits</a>
+                <a href="#blog" class="nav-link hover-target">Blog</a>
+                <a href="#contact" class="nav-link hover-target">Contact</a>
+            </div>
+
+            <div class="hamburger hover-target" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="hero-particles" id="particles"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title glitch" data-text="GAME WORKS STUDIO™">GAME WORKS STUDIO™</h1>
+            <p class="hero-subtitle">Independent Animation & Game Development Studio</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary hover-target magnetic">
+                    <span>View Our Work</span>
+                </a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSd5gkQQIHRuPBv0sbANtEf5pRaxsYLpjH-twe1M69FocUs5yA/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-secondary hover-target magnetic">
+                    <span>Join The Team</span>
+                </a>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <span>Scroll to explore</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title reveal">About Us</h2>
+            <div class="about-content">
+                <div class="about-text reveal">
+                    <h3 class="about-heading">Solar Flare Productions</h3>
+                    <p>Solar Flare Productions is an independent creative team focused on animation, storytelling, and game development.</p>
+                    <p>We create original worlds, characters, and stories with a strong focus on emotion, atmosphere, and memorable experiences.</p>
+                    <p>Our main project is <strong>Solar Flare</strong>, an original animated series combining science fiction, mystery, action, and character-driven storytelling.</p>
+                    <p>We are a growing team of creators, including animators, modelers, composers, voice actors, programmers, and other creative members who contribute their skills to our projects.</p>
+                    <p class="about-motto">"Our goal is simple: to create original stories that people can connect with and remember."</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number" data-target="2026">0</span>
+                            <span class="stat-label">Founded</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-target="15">0</span>
+                            <span class="stat-label">Team Members</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-target="3">0</span>
+                            <span class="stat-label">Active Projects</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual reveal">
+                    <div class="about-image-container hover-target">
+                        <img src="img/assets/about-visual.jpg" alt="Studio Workspace" class="about-image">
+                        <div class="about-image-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <h2 class="section-title reveal">What We Make?</h2>
+            <p class="section-subtitle reveal">We are making animations, games and more...</p>
+            
+            <!-- Main Project Slider -->
+            <div class="project-slider reveal" id="projectSlider">
+                <div class="slider-container">
+                    <!-- Slide 1: Solar Flare -->
+                    <div class="slide active">
+                        <div class="slide-bg" style="background-image: url('img/projects/solar-flare-bg.jpg')"></div>
+                        <div class="slide-content">
+                            <span class="slide-tag">Animated Series</span>
+                            <h3 class="slide-title">SOLAR FLARE</h3>
+                            <p class="slide-description">An original animated series combining science fiction, mystery, action, and character-driven storytelling.</p>
+                            <div class="slide-buttons">
+                                <button class="btn btn-primary hover-target video-trigger" data-video="YOUTUBE_VIDEO_ID_1">
+                                    <span>Watch Trailer</span>
+                                </button>
+                                <a href="#" class="btn btn-outline hover-target">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2: Jolly Serie -->
+                    <div class="slide">
+                        <div class="slide-bg" style="background-image: url('img/projects/jolly-bg.jpg')"></div>
+                        <div class="slide-content">
+                            <span class="slide-tag">Horror Game</span>
+                            <h3 class="slide-title">JOLLY UNDER PLEX</h3>
+                            <p class="slide-description">After the pizza palace closed, the animatronics were moved to a warehouse. But every show is also a trap.</p>
+                            <div class="slide-buttons">
+                                <button class="btn btn-primary hover-target video-trigger" data-video="YOUTUBE_VIDEO_ID_2">
+                                    <span>Watch Gameplay</span>
+                                </button>
+                                <a href="#jolly" class="btn btn-outline hover-target">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3: Super Grid -->
+                    <div class="slide">
+                        <div class="slide-bg" style="background-image: url('img/projects/supergrid-bg.jpg')"></div>
+                        <div class="slide-content">
+                            <span class="slide-tag">Parkour Game</span>
+                            <h3 class="slide-title">SUPER GRID</h3>
+                            <p class="slide-description">Complete all levels by doing parkour and finish the full game by discovering hidden places.</p>
+                            <div class="slide-buttons">
+                                <button class="btn btn-primary hover-target video-trigger" data-video="YOUTUBE_VIDEO_ID_3">
+                                    <span>Watch Trailer</span>
+                                </button>
+                                <a href="#supergrid" class="btn btn-outline hover-target">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slider Controls -->
+                <div class="slider-nav">
+                    <button class="slider-prev hover-target" aria-label="Previous slide">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M15 18l-6-6 6-6"/>
+                        </svg>
+                    </button>
+                    <div class="slider-dots"></div>
+                    <button class="slider-next hover-target" aria-label="Next slide">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 18l6-6-6-6"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Project Grid -->
+            <div class="projects-grid">
+                <div class="project-card reveal hover-target">
+                    <div class="project-image">
+                        <img src="img/projects/solar-flare-thumb.jpg" alt="Solar Flare Project">
+                        <div class="project-overlay">
+                            <button class="video-trigger hover-target" data-video="YOUTUBE_VIDEO_ID_1">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h4>Solar Flare</h4>
+                        <p>Animated Series</p>
+                    </div>
+                </div>
+
+                <div class="project-card reveal hover-target">
+                    <div class="project-image">
+                        <img src="img/projects/jolly-thumb.jpg" alt="Jolly Under Plex">
+                        <div class="project-overlay">
+                            <button class="video-trigger hover-target" data-video="YOUTUBE_VIDEO_ID_2">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h4>Jolly Under Plex</h4>
+                        <p>Horror Game</p>
+                    </div>
+                </div>
+
+                <div class="project-card reveal hover-target">
+                    <div class="project-image">
+                        <img src="img/projects/supergrid-thumb.jpg" alt="Super Grid">
+                        <div class="project-overlay">
+                            <button class="video-trigger hover-target" data-video="YOUTUBE_VIDEO_ID_3">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h4>Super Grid</h4>
+                        <p>Parkour Game</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jolly Serie Section -->
+    <section id="jolly" class="section jolly">
+        <div class="container">
+            <h2 class="section-title reveal">The Story</h2>
+            <div class="jolly-content">
+                <div class="jolly-story reveal">
+                    <h3 class="jolly-heading">JOLLY UNDER PLEX</h3>
+                    <div class="jolly-text">
+                        <p>After Jolly's Amazing Pizza Palace closed, the animatronics removed from the stages were moved to a warehouse undergoing renovation.</p>
+                        <p>The warehouse was an eerie place, filled with rusty shelves and light filtering in through broken windows. Yet, in the lower levels lay a hidden "Plex" system: forgotten cables, generators, and stage mechanisms that were still operational.</p>
+                        <p>As the animatronics explored this secret zone, they began to stage their own performances. By night, the warehouse transformed into an underground stage. Lights glowed red and purple, and echoes bounced off the metal walls; shadows became their only audience.</p>
+                        <p>In the fan game, the detective security guard witnesses these secret performances while exploring the area. But every show is also a trap: a single misstep drags you into the dark labyrinth of the Plex.</p>
+                    </div>
+                    
+                    <div class="jolly-lore">
+                        <h4>LORE</h4>
+                        <p>You are Karl Stein. The last few weeks have collapsed into the same day, repeating itself over and over: checking a balance where the numbers refuse to move in the right direction, calls you no longer answer because you already know who's calling and why.</p>
+                        <p>Desperate isn't a word you'd choose for yourself, but it's the most accurate one for the way you're grabbing at job listings now — not choosing, not comparing, just needing something, anything, to close a hole that keeps getting wider by the day.</p>
+                        <p>The flyer at the bus stop shouldn't have caught your eye — there are dozens like it stapled to every post, most promising easy money and delivering nothing. But this one is different. Cheap print, a font that looks like it's from another decade, stuck up crooked, like whoever hung it wasn't paying attention to where.</p>
+                        <p class="lore-quote">"JOLLY ENTERTAINMENT is hiring a night security guard for our warehouse. Pay is daily, in cash, at the end of each shift. The facility stores animatronic equipment. The company is not liable for any injury sustained through contact with the equipment."</p>
+                        <p>You read the warning more than once. The word "animatronic" lingers in your head longer than it should — something about the phrasing feels less like standard legal cover and more like a plain, almost matter-of-fact warning, written by someone who knows exactly what they're warning you about.</p>
+                        <p>But then your eyes land on "daily" again, and that settles it. Not after a week, not after some probation period — work today, get paid today. Given where you're standing right now, that's not just convenient. It's the only thing that matters.</p>
+                        <p>You tear the flyer down and shove it in your pocket, not yet knowing — and maybe not wanting to know — that these robots were never built to entertain children. Whatever "animatronic" means on this particular warehouse floor, it means something else.</p>
+                        <p>But that knowledge is still ahead of you. Right now, you have an address and a promise of money in your pocket, and that's enough to drown out the quiet voice telling you to read the warning again, more carefully this time.</p>
+                    </div>
+
+                    <div class="jolly-cta">
+                        <a href="https://gamejolt.com/@GAMES_GRAVE" target="_blank" rel="noopener noreferrer" class="btn btn-primary hover-target magnetic">
+                            <span>PLAY NOW</span>
+                        </a>
+                        <p class="jolly-credit">Game by EGES</p>
+                    </div>
+                </div>
+                
+                <div class="jolly-visual reveal">
+                    <div class="jolly-image-container">
+                        <img src="img/projects/jolly-poster.jpg" alt="Jolly Under Plex Poster" class="jolly-poster hover-target">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Super Grid Section -->
+    <section id="supergrid" class="section supergrid">
+        <div class="container">
+            <h2 class="section-title reveal">SUPER GRID</h2>
+            <div class="supergrid-content">
+                <div class="supergrid-info reveal">
+                    <p class="supergrid-goal">Goal: The aim is to complete all levels by doing parkour and to finish the full game by discovering hidden places.</p>
+                    
+                    <div class="supergrid-video">
+                        <div class="video-thumbnail hover-target video-trigger" data-video="YOUTUBE_VIDEO_ID_4">
+                            <img src="img/projects/supergrid-gameplay.jpg" alt="Super Grid Gameplay">
+                            <div class="play-button">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                                <span>MINI GAMEPLAY</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="supergrid-download">
+                        <a href="https://gamejolt.com/@gravesolar" target="_blank" rel="noopener noreferrer" class="btn btn-primary hover-target magnetic">
+                            <span>Download on GameJolt</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="supergrid-gallery reveal">
+                    <div class="gallery-grid">
+                        <div class="gallery-item hover-target">
+                            <img src="img/projects/supergrid-1.jpg" alt="Super Grid Screenshot 1">
+                        </div>
+                        <div class="gallery-item hover-target">
+                            <img src="img/projects/supergrid-2.jpg" alt="Super Grid Screenshot 2">
+                        </div>
+                        <div class="gallery-item hover-target">
+                            <img src="img/projects/supergrid-3.jpg" alt="Super Grid Screenshot 3">
+                        </div>
+                        <div class="gallery-item hover-target">
+                            <img src="img/projects/supergrid-4.jpg" alt="Super Grid Screenshot 4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Credits Section -->
+    <section id="credits" class="section credits">
+        <div class="container">
+            <h2 class="section-title reveal">Credits</h2>
+            <p class="section-subtitle reveal">The talented people behind our projects</p>
+            
+            <div class="credits-grid">
+                <!-- Team Member Card -->
+                <div class="credit-card reveal hover-target">
+                    <div class="credit-image">
+                        <img src="img/team/egesteam3.jpg" alt="EGESTEAM3">
+                    </div>
+                    <div class="credit-info">
+                        <h4>EGESTEAM3</h4>
+                        <p>CFO</p>
+                    </div>
+                </div>
+
+                <div class="credit-card reveal hover-target">
+                    <div class="credit-image">
+                        <img src="img/team/alerman.jpg" alt="ALERMAN">
+                    </div>
+                    <div class="credit-info">
+                        <h4>ALERMAN</h4>
+                        <p>3D Modeler</p>
+                    </div>
+                </div>
+
+                <div class="credit-card reveal hover-target">
+                    <div class="credit-image">
+                        <img src="img/team/gamingpanda.jpg" alt="GAMINGPANDA">
+                    </div>
+                    <div class="credit-info">
+                        <h4>GAMINGPANDA</h4>
+                        <p>Developer</p>
+                    </div>
+                </div>
+
+                <div class="credit-card reveal hover-target">
+                    <div class="credit-image">
+                        <img src="img/team/highrise.jpg" alt="HIGHRISE">
+                    </div>
+                    <div class="credit-info">
+                        <h4>HIGHRISE</h4>
+                        <p>Music Artist</p>
+                    </div>
+                </div>
+
+                <div class="credit-card reveal hover-target">
+                    <div class="credit-image">
+                        <img src="img/team/vg.jpg" alt="VG">
+                    </div>
+                    <div class="credit-info">
+                        <h4>VG</h4>
+                        <p>Scenery Artist</p>
+                    </div>
+                </div>
+
+                <div class="credit-card reveal hover-target">
+                    <div class="credit-image">
+                        <img src="img/team/gk.jpg" alt="GK">
+                    </div>
+                    <div class="credit-info">
+                        <h4>GK</h4>
+                        <p>3D Modeler</p>
+                    </div>
+                </div>
+
+                <div class="credit-card reveal hover-target">
+                    <div class="credit-image">
+                        <img src="img/team/magames.jpg" alt="MA GAMES">
+                    </div>
+                    <div class="credit-info">
+                        <h4>MA GAMES</h4>
+                        <p>Voice Actor</p>
+                    </div>
+                </div>
+
+                <div class="credit-card reveal hover-target">
+                    <div class="credit-image">
+                        <img src="img/team/wadd.jpg" alt="WADD">
+                    </div>
+                    <div class="credit-info">
+                        <h4>WADD</h4>
+                        <p>Voice Actor</p>
+                    </div>
+                </div>
+
+                <div class="credit-card reveal hover-target">
+                    <div class="credit-image">
+                        <img src="img/team/sonrohang.jpg" alt="SON ROHAN G">
+                    </div>
+                    <div class="credit-info">
+                        <h4>SON ROHAN G</h4>
+                        <p>Voice Actor</p>
+                    </div>
+                </div>
+
+                <div class="credit-card reveal hover-target">
+                    <div class="credit-image">
+                        <img src="img/team/sansimux.jpg" alt="SANSIMUX">
+                    </div>
+                    <div class="credit-info">
+                        <h4>SANSIMUX</h4>
+                        <p>Artist</p>
+                    </div>
+                </div>
+
+                <div class="credit-card reveal hover-target">
+                    <div class="credit-image">
+                        <img src="img/team/springygame.jpg" alt="SPRINGY GAME">
+                    </div>
+                    <div class="credit-info">
+                        <h4>SPRINGY GAME</h4>
+                        <p>2D Animator</p>
+                    </div>
+                </div>
+
+                <div class="credit-card reveal hover-target">
+                    <div class="credit-image">
+                        <img src="img/team/phantom-p.jpg" alt="PHANTOM P.">
+                    </div>
+                    <div class="credit-info">
+                        <h4>PHANTOM P.</h4>
+                        <p>3D Modeler</p>
+                    </div>
+                </div>
+
+                <div class="credit-card reveal hover-target">
+                    <div class="credit-image">
+                        <img src="img/team/gameworkss.jpg" alt="GAME WORKS S">
+                    </div>
+                    <div class="credit-info">
+                        <h4>GAME WORKS S</h4>
+                        <p>CEO</p>
+                    </div>
+                </div>
+
+                <div class="credit-card reveal hover-target">
+                    <div class="credit-image">
+                        <img src="img/team/swarnava.jpg" alt="SWARNAVA">
+                    </div>
+                    <div class="credit-info">
+                        <h4>SWARNAVA</h4>
+                        <p>3D Animator</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="section blog">
+    <div class="container">
+        <h2 class="section-title reveal">Latest News</h2>
+        <p class="section-subtitle reveal">Updates from the studio</p>
+        
+        <div class="blog-grid" id="blogGrid">
+            <!-- Blog posts will be loaded here via JavaScript -->
+        </div>
+
+        <div class="blog-view-all reveal">
+            <a href="blog.html" class="btn btn-primary hover-target magnetic">
+                <span>View All Posts</span>
+            </a>
+        </div>
+    </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title reveal">Connect With Us</h2>
+            <p class="section-subtitle reveal">Follow our journey and join the community</p>
+            
+            <div class="contact-content">
+                <div class="social-links reveal">
+                    <a href="https://gamejolt.com/@GAMES_GRAVE" target="_blank" rel="noopener noreferrer" class="social-card hover-target">
+                        <div class="social-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.3l6.5 3.2L12 10.7 5.5 7.5 12 4.3zM4 9.4l7 3.5v6.8l-7-3.5V9.4zm16 0v6.8l-7 3.5v-6.8l7-3.5z"/>
+                            </svg>
+                        </div>
+                        <div class="social-info">
+                            <h4>GameJolt - GAMES GRAVE</h4>
+                            <p>Main development profile</p>
+                        </div>
+                        <div class="social-arrow">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M7 17L17 7M17 7H8M17 7v9"/>
+                            </svg>
+                        </div>
+                    </a>
+
+                    <a href="https://gamejolt.com/@gravesolar" target="_blank" rel="noopener noreferrer" class="social-card hover-target">
+                        <div class="social-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.3l6.5 3.2L12 10.7 5.5 7.5 12 4.3zM4 9.4l7 3.5v6.8l-7-3.5V9.4zm16 0v6.8l-7 3.5v-6.8l7-3.5z"/>
+                            </svg>
+                        </div>
+                        <div class="social-info">
+                            <h4>GameJolt - GRAVE SOLAR</h4>
+                            <p>Solar Flare Productions</p>
+                        </div>
+                        <div class="social-arrow">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M7 17L17 7M17 7H8M17 7v9"/>
+                            </svg>
+                        </div>
+                    </a>
+
+                    <a href="https://www.youtube.com/@solarflare200" target="_blank" rel="noopener noreferrer" class="social-card hover-target">
+                        <div class="social-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12l-6.2 3.6z"/>
+                            </svg>
+                        </div>
+                        <div class="social-info">
+                            <h4>YouTube</h4>
+                            <p>@solarflare200</p>
+                        </div>
+                        <div class="social-arrow">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M7 17L17 7M17 7H8M17 7v9"/>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="join-team reveal">
+                    <div class="join-content">
+                        <h3>Do you want to join the team?</h3>
+                        <p>We're always looking for talented creators to join our growing studio.</p>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd5gkQQIHRuPBv0sbANtEf5pRaxsYLpjH-twe1M69FocUs5yA/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large hover-target magnetic">
+                            <span>Apply Now</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="img/logo.png" alt="GAME WORKS STUDIO™" class="footer-logo">
+                <p>Creating original stories that people can connect with and remember.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Projects</h4>
+                    <a href="#projects">Solar Flare</a>
+                    <a href="#jolly">Jolly Under Plex</a>
+                    <a href="#supergrid">Super Grid</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Studio</h4>
+                    <a href="#about">About Us</a>
+                    <a href="#credits">Credits</a>
+                    <a href="#blog">Blog</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Connect</h4>
+                    <a href="https://gamejolt.com/@GAMES_GRAVE" target="_blank" rel="noopener noreferrer">GameJolt</a>
+                    <a href="https://www.youtube.com/@solarflare200" target="_blank" rel="noopener noreferrer">YouTube</a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSd5gkQQIHRuPBv0sbANtEf5pRaxsYLpjH-twe1M69FocUs5yA/viewform" target="_blank" rel="noopener noreferrer">Join Team</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-credits">
+                <p>&copy; 2026 GAME WORKS STUDIO™. All rights reserved.</p>
+                <p class="powered-by">
+                    Website crafted by 
+                    <a href="https://rabbitgamesdev.github.io/RGS-Labs/" target="_blank" rel="noopener noreferrer" class="rgs-credit">
+                        RGS Labs™
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+    </footer>
+
+    <!-- Video Lightbox -->
+    <div class="lightbox" id="videoLightbox">
+        <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+        <div class="lightbox-content">
+            <button class="lightbox-close hover-target" id="lightboxClose" aria-label="Close video">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12"/>
+                </svg>
+            </button>
+            <div class="lightbox-video-container">
+                <iframe id="lightboxIframe" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/lightbox.js"></script>
+    <script src="js/blog.js"></script>
+</body>
+</html>
